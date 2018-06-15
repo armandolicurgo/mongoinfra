@@ -23,7 +23,8 @@ class Crud():
 	def d(id):
 		pass # return js
 	def open(url):
-		pass  # return database
+		cliente = MongoClient(url)
+		return cliente
 	def sync(dic,jso):
   	pass
 	def dodefault():
