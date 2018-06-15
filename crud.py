@@ -90,3 +90,51 @@ class Crud():
                 fig,ax = plt.subplots()
                 ax.plot(x, y,"bo")
                 plt.show()
+
+"""        import string
+        from pymongo import MongoClient
+        from selenium import webdriver
+        import json
+        from datetime import datetime
+"""
+
+        from bson.objectid import ObjectId
+
+        def mongar(st):
+                cliente = MongoClient('localhost', 27017)
+                banco = cliente.test
+                job = {"job1": 1,  "urls":  st, "ativo": 1, "repetir": 1}
+                alb = banco.coletados
+                m_id = alb.insert_one(job).inserted_id
+                #print( m_id )
+                return(m_id)
+
+        def fazer():
+                sites = """http://bigdata-madesimple.com/top-50-open-source-web-crawlers-for-data-mining/"""
+                ossites = {"job" : sites.split("\n")}
+                oid = mongar(sites)
+                            
+        def mongar2(st):
+                cliente = MongoClient('localhost', 27017)
+                banco = cliente.test
+                job = {"job1": 2,  "urls":  st, "ativo": 1, "repetir": 1}
+                alb = banco.coletados
+                m_id = alb.insert_one(job).inserted_id
+                #print( m_id )
+                return(m_id)
+
+
+        def fazer2():
+                sites = """
+
+                txt = """analise multi variada
+                tensorflow pca"""
+
+                txt = txt.replace(" ","+")
+                goog = """https://www.google.com/search?q="""
+                sites = ""
+                for um in txt.split("\n"):
+                        sites = sites + (goog+um+"\n")
+
+                ossites = {"job" : sites.split("\n")}
+                oid = mongar2(sites)
