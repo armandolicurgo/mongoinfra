@@ -48,9 +48,25 @@ class Palavras:
                                 x.append(i)
                                 y.append(ax)
                 return x,y
+	def variancia(x,d):
+		#lento
+		# d eh com zeros
+		s = 0
+		for y in x:
+			s += y
+		print(s,len(x))
+		avg = s/len(x)
+		for i in range(len(x)):
+			d[i] = (x[i] - avg) 
+			d[i] = d[i] * d[i]
+		su = 0
+		for i in range(len(x)):
+			su+=d[i]
+		return(su/(len(x)-1))
 
+        
         def contagem(self,txa):
-                n = 0
+                n = 0    # cuidado com passagem nao explicita
                 palavras = {}
                 for txt in txa:
                         if len(txt) > 0:
