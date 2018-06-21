@@ -33,6 +33,11 @@ class Crud():
 	def dodefault():
 		crd = Crud('mongodb://localhost:27017/','test')
   	
+	def trata(suported,solicited):
+		print(suported)
+		print(solicited)
+		print('{"ret","implementar as consultas json"}')
+	
         def Consulta1(self):
                 #import string
                 #from pymongo import MongoClient
@@ -131,7 +136,7 @@ class Crud():
                 tensorflow pca"""
 
                 txt = txt.replace(" ","+")
-                goog = """https://www.google.com/search?q="""
+                goog = "https://www.google.com/search?q="
                 sites = ""
                 for um in txt.split("\n"):
                         sites = sites + (goog+um+"\n")
