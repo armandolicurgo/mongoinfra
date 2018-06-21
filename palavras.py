@@ -22,18 +22,8 @@ class Palavras:
         def rettx(self,pp):
                 tx = self.ret(pp)
                 tx = tx.lower()
-                tx = tx.replace("\n\n"," ")
-                tx = tx.replace("\n"," ")
-                tx = tx.replace("\\n"," ")
-                tx = tx.replace(","," ")
-                tx = tx.replace(";"," ")
-                #tx = tx.replace("."," ")
-                tx = tx.replace("("," ")
-                tx = tx.replace(")"," ")
-                tx = tx.replace(":"," ")
-                tx = tx.replace('"'," ")
-                tx = tx.replace("  "," ")
-                tx = tx.replace("..",".")
+		for car in ["\n\n","\n","\\n",",",";","(",":",'"',")","  ",".."]:
+                	tx = tx.replace(car," ")
                 return(tx)
 
 
@@ -139,12 +129,6 @@ class Palavras:
                                 #print(x[c])
                 sai.close()
 
-                """
-                tx2 = tx1
-                for i in range(0,len(tx1),4000):
-                        tx1 = tx2[i:i+4000]
-                        print(tx1)
-                """
         def dodefault(self,dicpt,assunto,etiqueta,saida,tipoabre,delim,delim2,procuro):
                 e = Palavras()
                 dic = (e.rettx(dicpt))
@@ -157,7 +141,7 @@ class Palavras:
                 n,palavras = e.contagem(txa)
                 x,aly = e.tFIDF(palavras,n)
                 for c in procuro.split("\n"):
-                    sai.write(str(tx1.count(c+" "))+" ")
+                    sai.write(str(tx1.count(c+delim2))+delim2)
                 sai.write("\n")
                 sai.close()
 
@@ -197,3 +181,5 @@ if __name__ == "__main__":
             sorted_words = sorted(scores.items(), key=lambda x: x[1], reverse=True)
             for word, score in sorted_words[0:5]:
                 print("\tWord: {}, TF-IDF: {}".format(word, round(score, 5)))
+
+		
