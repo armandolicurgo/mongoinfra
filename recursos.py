@@ -11,7 +11,7 @@ def return_(p):
 	print(p)
 def exec_(rq_find,rq)
 	print(rq_find,rq)
-	x = Crud(rq_find.split("/"),rq.split("/"))
+	x = Crud.trata(rq_find.split("/"),rq.split("/"))
 	return_("200",x)
 def trataRequest(rq):
 	i=0	
