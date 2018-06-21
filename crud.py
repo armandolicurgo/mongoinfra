@@ -3,11 +3,11 @@
 # crud.py -init database
 # crud.py -init database colection1 colection2 colection3
 # crud.py 
-import pymongo
+#import pymongo
 import json
 import string
-#from pymongo import MongoClient
-import matplotlib.pyplot as plt
+from pymongo import MongoClient
+
 
 
 class Crud():
