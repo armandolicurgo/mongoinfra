@@ -1,3 +1,5 @@
+# req.py - autotest for the app
+
 import requests
 import json
 print(dir(requests))
