@@ -3,6 +3,7 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
 import crud
+#usar flask
 
 
 
