@@ -40,15 +40,3 @@ class Crud():
 					print( doc )
 		finally:
 			client.close()
-	def trataRequest(self,rq):
-		i=0	
-		for one in interf:
-			rq_find = rq.find(one)
-			if (rq_find != -1):
-				return(self.trata(one.split("/"),rq.split("/")))
-				break
-			i+=1
-		if (i>len(inter)):
-			return("501")
-
-		
