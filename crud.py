@@ -13,11 +13,6 @@ interf = interf.split("\n")
 
 class Crud():
 	cliente = ''
-	def trata(self,suported,solicited):
-		print(suported)
-		print(solicited)
-		return('{"ret","implementar as consultas json"}')
-
 	def __init__(self,u='mongodb://localhost:27017/',c='test'):
 		cliente = MongoClient(u)
 	def dodefault(self):
