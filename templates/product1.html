@@ -1,0 +1,23 @@
+
+
+
+
+
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+  <div>
+  
+    {{ render_field(form.id_,value=id_) }}  
+    {{ render_field(form.customer,value=customer) }}
+    {{ render_field(form.customerid,value=customerid) }}
+    {{ render_field(form.group,value=group) }}      
+    {{ render_field(form.price,value=price) }}
+    {{ render_field(form.packing,value=packing) }}
+    {{ render_field(form.unitperpack,value=unitperpack) }}
+    {{ render_field(form.available,value=available) }}
+    {{ render_field(form.credit,value=credit) }}
+
+  </div>
+  <p><input type=submit value=ok>
+</form>
+ 

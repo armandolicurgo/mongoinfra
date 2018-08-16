@@ -1,0 +1,25 @@
+
+
+
+
+
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+  <div>
+  
+    {{ render_field(form.id_,value=id_) }}  
+    {{ render_field(form.customer,value=customer) }}
+    {{ render_field(form.customerid,value=customerid) }}
+    {{ render_field(form.address,value=address) }}
+    {{ render_field(form.address2,value=address2) }}
+    {{ render_field(form.city,value=city) }}
+    {{ render_field(form.state_,value=state_) }}
+    {{ render_field(form.phone,value=phone) }}
+    {{ render_field(form.contact,value=contact) }}
+    {{ render_field(form.document_,value=document_) }}
+    {{ render_field(form.credit,value=credit) }}
+
+  </div>
+  <p><input type=submit value=ok>
+</form>
+ 
