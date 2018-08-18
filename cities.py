@@ -2,9 +2,6 @@
 from pymongo import MongoClient
 
 client = MongoClient("mongodb://localhost:27017/")
-#client = MongoClient("mongodb://host:port/")
-
-
 database = client["test"]
 collection = database["csh_clients"]
 
