@@ -6,6 +6,7 @@ pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
 allpages = (pdfReader.numPages)
 
 alltext = ""
+#colocar isso em parametro
 x = open('constituicao_ingles_3ed.pdf.txt',"w")
 
 for page in range(allpages):
