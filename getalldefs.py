@@ -1,3 +1,7 @@
+#
+#  getalldefs.py - search all "def " declarations inside .py file
+#
+#
 def getfile(file):
 	t = "EEERRROOORRR"
 	try:
